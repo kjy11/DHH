@@ -1,9 +1,7 @@
 package com.example.ddh;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.support.graphics.drawable.AnimationUtilsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Fade;
 import android.transition.Transition;
@@ -14,7 +12,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.TextView;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -143,7 +140,7 @@ public class SettingActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 
-        Intent resultIntent = new Intent();
+        /*
         if(!mEtDay.equals("")){
             mTime[0] = Integer.parseInt(mEtDay.getText().toString());
         }
@@ -162,7 +159,7 @@ public class SettingActivity extends AppCompatActivity {
 
         resultIntent.putExtra("time", mTime);
         resultIntent.putExtra("check", mCheckAlarm);
-        setResult(RESULT_OK, resultIntent);
+        */
         finish();
 
     }
