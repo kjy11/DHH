@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ddh.MaterialCalendarDecorator.DayDecorator;
@@ -78,6 +79,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SettingActivity.class));
+            }
+        });
+
+        ImageView btnCheckList = findViewById(R.id.btn_check_list);
+        ImageView btnOffMatch = findViewById(R.id.btn_off_matching);
+
+        btnCheckList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CheckListActivity.class));
             }
         });
 

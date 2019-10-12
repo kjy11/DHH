@@ -153,6 +153,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
+                android:id="@+id/btn_check_list"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sleep_check"
@@ -160,6 +161,7 @@
                 android:layout_weight="1"/>
 
             <ImageView
+                android:id="@+id/btn_off_matching"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/off_matching"
