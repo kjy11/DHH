@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="day">#faaeae</color>
+    <color name="evening">#aee772</color>
+    <color name="night">#9578ff</color>
+    <color name="butterscotch">#ffcd44</color>
 </resources>
