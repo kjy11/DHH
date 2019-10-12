@@ -45,7 +45,8 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify(NOTICATION_ID, builder.build()); //알람 생성
-
+        wakeLock.release();
+        wakeLock = null;
     }
 }
 
