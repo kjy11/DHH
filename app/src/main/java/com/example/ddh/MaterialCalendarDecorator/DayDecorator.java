@@ -30,6 +30,6 @@ public class DayDecorator implements DayViewDecorator{
 
     @Override
     public void decorate(DayViewFacade view) {
-        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.day)));
+        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.c_day)));
     }
 }

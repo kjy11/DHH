@@ -28,7 +28,7 @@ public class NightDecorator implements DayViewDecorator{
 
     @Override
     public void decorate(DayViewFacade view) {
-        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.night)));
+        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.c_night)));
 
     }
 }

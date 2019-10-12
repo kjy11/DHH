@@ -39,8 +39,8 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, context.getString(R.string.notification_channel_id))
                 .setSmallIcon(R.drawable.ic_love_p_64px) //알람 아이콘
-                .setContentTitle("Title")  //알람 제목
-                .setContentText("Text") //알람 내용
+                .setContentTitle("근무시간 알림")  //알람 제목
+                .setContentText("근무 3시간 전입니다") //알람 내용
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT); //알람 중요도
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
