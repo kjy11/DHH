@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable(){
             @Override
             public void run(){
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, ConditionActivity.class));
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 /* 스플래시 액티비티를 스택에서 제거. */
                 SplashActivity.this.finish();
