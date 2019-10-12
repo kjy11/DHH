@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/setting_top"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="bottom"
+        android:paddingStart="30dp"
+        android:paddingBottom="10dp"
+        android:background="#ffcd44"
+        android:text="MY PAGE"
+        android:textSize="21sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bt_setting_sleep"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#EFEFEF"
+        android:clickable="true"
+        android:onClick="SettingOnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="취침 시간 알림"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Switch
+            android:id="@+id/switch_setting_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#e2e2e2"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_setting_sleep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_setting_sleep"
+        app:layout_constraintBottom_toTopOf="@id/bt_setting_wake">
+
+        <ImageView
+            android:id="@+id/setting_d"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:background="@drawable/day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_setting_d"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:maxEms="2"
+            app:layout_constraintStart_toEndOf="@id/setting_d"
+            app:layout_constraintBottom_toBottomOf="@id/setting_d"
+            app:layout_constraintTop_toTopOf="@id/setting_d" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 전 부터 취침"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/et_setting_d"
+            app:layout_constraintBottom_toBottomOf="@id/setting_d"
+            app:layout_constraintTop_toTopOf="@id/setting_d"/>
+
+        <View
+            android:layout_width="93dp"
+            android:layout_height="2dp"
+            android:background="#D8D8D8"
+            app:layout_constraintStart_toStartOf="@id/et_setting_d"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_d" />
+
+        <ImageView
+            android:id="@+id/setting_e"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/eve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setting_d" />
+
+        <EditText
+            android:id="@+id/et_setting_e"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:maxEms="2"
+            app:layout_constraintStart_toEndOf="@id/setting_e"
+            app:layout_constraintBottom_toBottomOf="@id/setting_e"
+            app:layout_constraintTop_toTopOf="@id/setting_e" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 전 부터 취침"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/et_setting_e"
+            app:layout_constraintBottom_toBottomOf="@id/setting_e"
+            app:layout_constraintTop_toTopOf="@id/setting_e"/>
+
+        <View
+            android:layout_width="93dp"
+            android:layout_height="2dp"
+            android:background="#D8D8D8"
+            app:layout_constraintStart_toStartOf="@id/et_setting_e"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_e" />
+
+        <ImageView
+            android:id="@+id/setting_n"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/night"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setting_e" />
+
+        <EditText
+            android:id="@+id/et_setting_n_before"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:maxEms="2"
+            app:layout_constraintStart_toEndOf="@id/setting_n"
+            app:layout_constraintBottom_toBottomOf="@id/setting_n"
+            app:layout_constraintTop_toTopOf="@id/setting_n" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 전 부터 취침"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/et_setting_n_before"
+            app:layout_constraintBottom_toBottomOf="@id/setting_n"
+            app:layout_constraintTop_toTopOf="@id/setting_n"/>
+
+        <View
+            android:layout_width="93dp"
+            android:layout_height="2dp"
+            android:background="#D8D8D8"
+            app:layout_constraintStart_toStartOf="@id/et_setting_n_before"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_n_before" />
+
+        <EditText
+            android:id="@+id/et_setting_n_after"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:background="@null"
+            android:inputType="number"
+            android:maxEms="2"
+            app:layout_constraintStart_toEndOf="@id/setting_n"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_n_before"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 전 부터 취침"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/et_setting_n_after"
+            app:layout_constraintBottom_toBottomOf="@id/et_setting_n_after"
+            app:layout_constraintTop_toTopOf="@id/et_setting_n_after"/>
+
+        <View
+            android:layout_width="93dp"
+            android:layout_height="2dp"
+            android:background="#D8D8D8"
+            app:layout_constraintStart_toStartOf="@id/et_setting_n_after"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_n_after" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bt_setting_wake"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#EFEFEF"
+        android:clickable="true"
+        android:onClick="SettingOnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/con_setting_sleep">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="기상 시간 알림"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Switch
+            android:id="@+id/switch_setting_wake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#e2e2e2"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_setting_wake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_setting_wake"
+        app:layout_constraintBottom_toTopOf="@id/bt_setting_work">
+
+        <TextView
+            android:id="@+id/setting_wake"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:text="출근"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_setting_wake"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:background="@null"
+            android:inputType="number"
+            android:maxEms="2"
+            app:layout_constraintStart_toEndOf="@id/setting_wake"
+            app:layout_constraintBottom_toBottomOf="@id/setting_wake"
+            app:layout_constraintTop_toTopOf="@id/setting_wake" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 전 기상"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@id/et_setting_wake"
+            app:layout_constraintBottom_toBottomOf="@id/setting_wake"
+            app:layout_constraintTop_toTopOf="@id/setting_wake"/>
+
+        <View
+            android:layout_width="93dp"
+            android:layout_height="2dp"
+            android:background="#D8D8D8"
+            app:layout_constraintStart_toStartOf="@id/et_setting_wake"
+            app:layout_constraintTop_toBottomOf="@id/et_setting_wake" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bt_setting_work"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#EFEFEF"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/con_setting_wake">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="행동 권장 알림"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Switch
+            android:id="@+id/switch_setting_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#e2e2e2"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
