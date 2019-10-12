@@ -27,9 +27,10 @@ public class ConditionActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.condition_good:
-                startActivity(new Intent(ConditionActivity.this, MainActivity.class));
             case R.id.condition_soso:
             case R.id.condition_bad:
+                startActivity(new Intent(ConditionActivity.this, MainActivity.class));
+                finish();
                 break;
         }
     }
