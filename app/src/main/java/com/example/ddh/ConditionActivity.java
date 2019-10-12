@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.ddh.service.JobSchedulerStart;
+
 public class ConditionActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class ConditionActivity extends AppCompatActivity implements View.OnClick
         ivGood.setOnClickListener(this);
         ivSoso.setOnClickListener(this);
         ivBad.setOnClickListener(this);
-
+        JobSchedulerStart.start(this);
     }
 
 
