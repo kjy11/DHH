@@ -8,4 +8,6 @@
     <color name="evening">#aee772</color>
     <color name="night">#9578ff</color>
     <color name="butterscotch">#ffcd44</color>
+    <color name="lgt_gray">#ffcd44</color>
+    <color name="black">#000000</color>
 </resources>

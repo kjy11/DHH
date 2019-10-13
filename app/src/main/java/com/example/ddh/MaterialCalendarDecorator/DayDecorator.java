@@ -1,8 +1,6 @@
 package com.example.ddh.MaterialCalendarDecorator;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 
 import com.example.ddh.R;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -30,6 +28,6 @@ public class DayDecorator implements DayViewDecorator{
 
     @Override
     public void decorate(DayViewFacade view) {
-        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.c_day)));
+        view.setSelectionDrawable(Objects.requireNonNull(context.getDrawable(R.drawable.day)));
     }
 }

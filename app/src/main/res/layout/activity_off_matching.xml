@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent"
+    android:background="@color/white">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- year month week layout -->
+        <android.support.constraint.ConstraintLayout
+            android:background="@color/lgt_gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/ymwLayout"
+            app:layout_constraintDimensionRatio="7:1.85"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <!--            <android.support.v7.widget.AppCompatImageButton
+                                android:id="@+id/ymwPrevImgBtn"
+                                android:src="@drawable/ic_arrow_back"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>-->
+            <ImageView
+                android:id="@+id/imgLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/arrow_left"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/ymwTxtView"
+                app:layout_constraintStart_toEndOf="@id/imgLeft"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imgRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ymwTxtView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/arrow_right"/>
+
+            <!--            <android.support.v7.widget.AppCompatImageButton
+                                android:id="@+id/ymwNextImgBtn"
+                                android:src="@drawable/ic_arrow_forward"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"/>-->
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:background="@color/white"
+            android:id="@+id/daysLayout"
+            app:layout_constraintTop_toBottomOf="@+id/ymwLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_sun"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monTxtView"
+                android:id="@+id/sunTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_mon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/sunTxtView"
+                app:layout_constraintEnd_toStartOf="@+id/tueTxtView"
+                android:id="@+id/monTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_tue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/monTxtView"
+                app:layout_constraintEnd_toStartOf="@+id/wedTxtView"
+                android:id="@+id/tueTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_wed"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/tueTxtView"
+                app:layout_constraintEnd_toStartOf="@+id/thuTxtView"
+                android:id="@+id/wedTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_thu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/wedTxtView"
+                app:layout_constraintEnd_toStartOf="@+id/friTxtView"
+                android:id="@+id/thuTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_fri"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/thuTxtView"
+                app:layout_constraintEnd_toStartOf="@+id/satTxtView"
+                android:id="@+id/friTxtView"
+                style="@style/days_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:text="@string/txt_sat"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toEndOf="@+id/friTxtView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/satTxtView"
+                style="@style/days_style"/>
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/daysLayout"
+            android:id="@+id/daysRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!--
+        <ImageView
+            android:id="@+id/imgFestival"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/daysRecyclerView"
+            android:scaleType="centerCrop"
+            android:background="@drawable/everland"/>
+        -->
+
+        <com.tmall.ultraviewpager.UltraViewPager
+            android:id="@+id/vpImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/daysRecyclerView"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/vpImage"
+            android:layout_marginTop="10dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="25dp"
+                android:orientation="horizontal">
+                
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/day"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:text="김데이" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="기분 좋음"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2e2e2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/icon_off"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:text="박오프" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="피곤함"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2e2e2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/eve"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:text="최이브" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="우울함"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2e2e2"/>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

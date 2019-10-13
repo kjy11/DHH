@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">DDH</string>
     <string name="duty_select">듀티 선택</string>
+
     <string name="notification_channel_id">"notification_channel_id"</string>
     <string name="notification_channel_name">"notification_channel_name"</string>
+
+    <string name="txt_sun">일</string>
+    <string name="txt_mon">월</string>
+    <string name="txt_tue">화</string>
+    <string name="txt_wed">수</string>
+    <string name="txt_thu">목</string>
+    <string name="txt_fri">금</string>
+    <string name="txt_sat">토</string>
+>>>>>>> Stashed changes
 </resources>
