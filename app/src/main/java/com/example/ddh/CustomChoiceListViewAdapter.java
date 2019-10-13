@@ -1,11 +1,12 @@
 package com.example.ddh;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +53,24 @@ public class CustomChoiceListViewAdapter extends BaseAdapter {
             iconImageView.setImageDrawable(context.getResources().getDrawable(R.drawable.invalid_name));
         }
         textTextView.setText(listViewItem.getText());
+
+        final CheckBox checkBox = convertView.findViewById(R.id.checkBox1);
+
+        View.OnClickListener listener = new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()){
+                    case R.id.checkBox1:
+                        //checkBox.toggle();
+                        Log.d("checkbox", String.valueOf(checkBox.isChecked()));
+                        break;
+                }
+            }
+        };
+
+
+        checkBox.setOnClickListener(listener);
 
         return convertView;
     }
